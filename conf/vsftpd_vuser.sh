@@ -1,7 +1,7 @@
 #!/bin/bash
 vsftpd_username="$1"
 vsftpd_userpass="$2"
-vsftpd_pwd_file="/etc/vsftpd/vuser.passwd"
+vsftpd_pwd_file="/etc/vsftpd/"${vsftpd_username}"_vuser.passwd"
 
 # Main
 case $1 in
