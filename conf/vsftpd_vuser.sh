@@ -1,12 +1,12 @@
 #!/bin/bash
 vsftpd_username="$1"
 vsftpd_userpass="$2"
-vsftpd_pwd_file="/etc/vsftpd/"${vsftpd_username}"_vuser.passwd"
+vsftpd_pwd_file="/etc/vsftpd/vuser.passwd"
 
 # Main
 case $1 in
     $1)
-        htpasswd -bcd $vsftpd_pwd_file $vsftpd_username $vsftpd_userpass
+        htpasswd -bd $vsftpd_pwd_file $vsftpd_username $vsftpd_userpass
         echo
         echo "User Name          : $vsftpd_username"
         echo "User Passwd        : $vsftpd_userpass"
